@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const bookNames_1 = __importDefault(require("./bookNames"));
 const app = (0, express_1.default)();
 app.get('/all', (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
     res.json(bookNames_1.default);
 });
 app.get('/search', (req, res) => {
